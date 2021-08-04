@@ -10,7 +10,8 @@
     "seed:generate": "ts-node-dev ./node_modules/typeorm/cli.js migration:create -c seed -n ",
     "seed:run": "ts-node-dev ./node_modules/typeorm/cli.js migration:run -c seed",
     "seed:revert": "ts-node-dev ./node_modules/typeorm/cli.js migration:revert -c seed",
-    "test": "jest"
+    "test": "jest",
+    "start": "node ./dist/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
