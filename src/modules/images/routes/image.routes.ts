@@ -12,7 +12,7 @@ imagesRoutes.post('/', imagesController.create);
 
 imagesRoutes.patch(
   '/product-image',
-  upload.single('image-file'),
+  upload.single('file'),
   async (request, response) => {
     return response.json({ message: 'ok' });
   },

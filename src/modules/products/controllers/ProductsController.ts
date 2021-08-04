@@ -10,10 +10,6 @@ export default class ProductsController {
     const productsRepository = new ProductsRepository();
     const getAllProductsService = new GetAllProductsService(productsRepository);
 
-    console.log(request.query);
-    console.group(currentPage);
-    console.log(productName);
-
     const pageData = await getAllProductsService.execute({
       productsPerPage,
       currentPage,

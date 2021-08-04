@@ -5,7 +5,7 @@ import CreateImageService from '../services/CreateImageService';
 
 export default class ImagesController {
   public async create(request: Request, response: Response): Promise<Response> {
-    const { subtitle, product_id } = request.body;
+    const { imagePath, subtitle, product_id } = request.body;
 
     const imagesRepository = new ImagesRepository();
     const productsRepository = new ProductsRepository();
@@ -15,8 +15,10 @@ export default class ImagesController {
       productsRepository,
     );
 
+    console.log(request.file?.filename);
+
     const image = await createImageService.execute({
-      imagePath: request.file.filename,
+      imagePath,
       subtitle,
       product_id,
     });
