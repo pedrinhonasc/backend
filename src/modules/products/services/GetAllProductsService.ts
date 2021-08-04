@@ -50,7 +50,7 @@ export default class GetAllProductsService {
       discountPrice:
         Math.round(product.price * (1 - product.discount / 100) * 100) / 100,
       images: product.images.map(
-        image => `${process.env.IMAGE_URL}/files/${image.path}`,
+        image => `${process.env.IMAGE_URL}/${image.path}`,
       ),
     }));
 
