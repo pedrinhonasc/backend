@@ -1,4 +1,4 @@
-const [rootDir, fileExtension] = process.env.NODE_ENV === "development" ? ['src', 'ts'] : ['dist', 'js'];
+const [rootDir, fileExtension, ssl] = process.env.NODE_ENV === "development" ? ['src', 'ts', false] : ['dist', 'js', true];
 console.log(rootDir, fileExtension);
 
 module.exports = [
@@ -14,7 +14,8 @@ module.exports = [
     ],
     "cli": {
       "migrationsDir": "./src/shared/database/migrations"
-    }
+    },
+    "ssl": ssl
   },
   {
     "name": "seed",
@@ -29,6 +30,7 @@ module.exports = [
     ],
     "cli": {
       "migrationsDir": "./src/shared/database/seeds"
-    }
+    },
+    "ssl": ssl
 }
 ]
