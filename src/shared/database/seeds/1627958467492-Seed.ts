@@ -3,19 +3,19 @@ import { MigrationInterface, QueryRunner } from 'typeorm';
 export default class Seed1627958467492 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(`INSERT INTO products (id,name,brand,description,price,discount,created_at,updated_at) VALUES
-    ('854614ee-89a6-4edb-9f83-ccbae15ae589','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
-    ('a5ff02d6-0e71-4da4-ab0d-3426111fe72e','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('854614ee-89a6-4edb-9f83-ccbae15ae589','kit de lençol','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('a5ff02d6-0e71-4da4-ab0d-3426111fe72e','kit de lençol para cama','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
     ('59101332-1e48-466a-adb6-2288cdad02d7','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
-    ('5c42f319-1e9e-4c6b-a2ee-394ef17d96c4','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
-    ('0162b765-cad2-45fc-ab75-0349849179f1','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
-    ('b0b3880a-f093-4a1b-870f-b3bda8c131e3','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
-    ('4dc5c16f-45fc-478c-8747-5b1497056d00','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
-    ('08ed49ff-2a6e-42ff-b562-f6cd9d08c6a5','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
-    ('d8af00a2-f0cf-4b56-8595-09bfc024696e','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
-    ('7a7d2cdf-a2df-4db4-a2c7-209c833c768a','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
-    ('2bbdb058-5495-4937-aea3-18b82844ac8d','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
-    ('3d776e9b-f1df-4dcd-bd36-07dca871265c','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
-    ('dd9243e0-7a22-41d0-a7ae-8f1cc2821c9c','kit de lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('5c42f319-1e9e-4c6b-a2ee-394ef17d96c4','lençol para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('0162b765-cad2-45fc-ab75-0349849179f1','lençol para cama','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('b0b3880a-f093-4a1b-870f-b3bda8c131e3','coberta para cama','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('4dc5c16f-45fc-478c-8747-5b1497056d00','coberta para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('08ed49ff-2a6e-42ff-b562-f6cd9d08c6a5','kit de cobertas para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('d8af00a2-f0cf-4b56-8595-09bfc024696e','kit de cobertor para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('7a7d2cdf-a2df-4db4-a2c7-209c833c768a','cobertor para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('2bbdb058-5495-4937-aea3-18b82844ac8d','kit de colcha para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('3d776e9b-f1df-4dcd-bd36-07dca871265c','colcha para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
+    ('dd9243e0-7a22-41d0-a7ae-8f1cc2821c9c','kit de edredom para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
     ('92dcb48d-55f4-4c2f-954c-28bd107a3bc7','conjunto de toalhas de banho','Banho Bom','Casal',298.5,5,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255');`);
 
     await queryRunner.query(`INSERT INTO public.products_images (id, path, subtitle, product_id,created_at,updated_at) VALUES
