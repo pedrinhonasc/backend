@@ -1,5 +1,5 @@
 export default interface ICreateImageDTO {
   imagePath: string;
-  subtitle: string;
+  caption: string;
   product_id: string;
 }

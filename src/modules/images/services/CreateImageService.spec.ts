@@ -30,7 +30,7 @@ describe('CreateImage', () => {
 
     const response = await createImage.execute({
       imagePath: 'img.png',
-      subtitle: 'img',
+      caption: 'img',
       product_id: product.id,
     });
 
@@ -48,7 +48,7 @@ describe('CreateImage', () => {
     expect(
       createImage.execute({
         imagePath: 'img.png',
-        subtitle: 'img',
+        caption: 'img',
         product_id: '123456789',
       }),
     ).rejects.toBeInstanceOf(AppError);

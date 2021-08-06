@@ -47,14 +47,19 @@ class FakeProductsRepository implements IProductsRepository {
         return 0;
       },
     );
-    const returnedProducts: Product[] = sortedProducts
+    const productsToReturn: Product[] = sortedProducts
       .splice(0, skipOffset)
       .slice(0, productsPerPage);
 
-    const aux: Product[] = returnedProducts.map(product =>
-      Object.assign(product, { images: ['img1.png', 'img2.png'] }),
+    const productsReady: Product[] = productsToReturn.map(product =>
+      Object.assign(product, {
+        images: [
+          { path: 'img1.png', caption: 'Cama' },
+          { path: 'img2.png', caption: 'banho' },
+        ],
+      }),
     );
-    return [aux, this.products.length];
+    return [productsReady, this.products.length];
   }
 
   public async findById(id: string): Promise<Product | undefined> {

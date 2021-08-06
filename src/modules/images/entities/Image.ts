@@ -18,7 +18,7 @@ class Image {
   path: string;
 
   @Column()
-  subtitle: string;
+  caption: string;
 
   @Column()
   product_id: string;

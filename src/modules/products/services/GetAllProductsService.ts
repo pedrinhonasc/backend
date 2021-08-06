@@ -8,6 +8,11 @@ interface IResponse {
   totalPagesNum: number;
 }
 
+interface IImage {
+  path: string;
+  caption: string;
+}
+
 interface IProductsData {
   id: string;
   name: string;
@@ -15,7 +20,7 @@ interface IProductsData {
   description: string;
   originalPrice: number;
   discountPrice: number;
-  images: string[];
+  images: IImage[];
 }
 
 export default class GetAllProductsService {
@@ -41,9 +46,12 @@ export default class GetAllProductsService {
       originalPrice: parseInt(product.price.toString(), 10),
       discountPrice:
         Math.round(product.price * (1 - product.discount / 100) * 100) / 100,
-      images: product.images.map(
-        image => `${process.env.IMAGE_URL}/${image.path}`,
-      ),
+      images: product.images.map(image => {
+        return {
+          path: `${process.env.IMAGE_URL}/${image.path}`,
+          caption: image.caption,
+        };
+      }),
     }));
 
     const response: IResponse = {

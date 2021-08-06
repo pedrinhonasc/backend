@@ -12,12 +12,12 @@ export default class ImagesRepository implements IImagesRepository {
 
   public async create({
     imagePath,
-    subtitle,
+    caption,
     product_id,
   }: ICreateImageDTO): Promise<Image> {
     const image = this.ormRepository.create({
       path: imagePath,
-      subtitle,
+      caption,
       product_id,
     });
 

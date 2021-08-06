@@ -5,7 +5,7 @@ import AppError from '../../../shared/errors/AppError';
 
 interface IRequest {
   imagePath: string;
-  subtitle: string;
+  caption: string;
   product_id: string;
 }
 
@@ -17,7 +17,7 @@ export default class CreateImageService {
 
   public async execute({
     imagePath,
-    subtitle,
+    caption,
     product_id,
   }: IRequest): Promise<Image> {
     const foundProduct = await this.productsRepository.findById(product_id);
@@ -26,7 +26,7 @@ export default class CreateImageService {
 
     const image = await this.imagesRepository.create({
       imagePath,
-      subtitle,
+      caption,
       product_id,
     });
 

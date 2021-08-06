@@ -8,14 +8,14 @@ export default class FakeImagesRepository implements IImagesRepository {
 
   public async create({
     imagePath,
-    subtitle,
+    caption,
     product_id,
   }: ICreateImageDTO): Promise<Image> {
     const image = new Image();
     Object.assign(image, {
       id: uuid(),
       path: imagePath,
-      subtitle,
+      caption,
       product_id,
     });
 

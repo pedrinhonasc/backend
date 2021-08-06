@@ -6,21 +6,13 @@ let fakeProductsRepository: FakeProductsRepository;
 let getAllProducts: GetAllProductsService;
 let createProduct: CreateProductService;
 
-let prod1;
-let prod2;
-let prod3;
-// let prod4;
-// let prod5;
-// let prod6;
-// let prod7;
-
 describe('GetAllProduct', () => {
   beforeAll(async () => {
     fakeProductsRepository = new FakeProductsRepository();
     getAllProducts = new GetAllProductsService(fakeProductsRepository);
     createProduct = new CreateProductService(fakeProductsRepository);
 
-    prod1 = await createProduct.execute({
+    await createProduct.execute({
       name: 'Kit de lençol',
       brand: 'Bom sono',
       description: 'Casal',
@@ -28,7 +20,7 @@ describe('GetAllProduct', () => {
       discount: 5,
     });
 
-    prod2 = await createProduct.execute({
+    await createProduct.execute({
       name: 'Kit de lençol',
       brand: 'Bom sono',
       description: 'Casal',
@@ -36,7 +28,7 @@ describe('GetAllProduct', () => {
       discount: 5,
     });
 
-    prod3 = await createProduct.execute({
+    await createProduct.execute({
       name: 'Kit de lençol',
       brand: 'Bom sono',
       description: 'Casal',

@@ -18,7 +18,7 @@ export default class Seed1627958467492 implements MigrationInterface {
     ('dd9243e0-7a22-41d0-a7ae-8f1cc2821c9c','kit de edredom para cama 210 fios','Classic','Solteiro Extra',298.5,10,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
     ('92dcb48d-55f4-4c2f-954c-28bd107a3bc7','conjunto de toalhas de banho','Banho Bom','Casal',298.5,5,'2021-08-02 14:28:46.255','2021-08-02 14:28:46.255');`);
 
-    await queryRunner.query(`INSERT INTO public.products_images (id, path, subtitle, product_id,created_at,updated_at) VALUES
+    await queryRunner.query(`INSERT INTO public.products_images (id, path, caption, product_id,created_at,updated_at) VALUES
     ('9cb52c13-584d-42e8-b146-d4daf368c1dc','a9a59fce17b636f9afa4-bed_1.jpg','Cama','854614ee-89a6-4edb-9f83-ccbae15ae589','2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
     ('3e3d43e9-5395-424a-a76a-1ac9a0418dbf','7c5be562303811a72cea-bed_2.jpg','Cama','854614ee-89a6-4edb-9f83-ccbae15ae589','2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),
     ('4e170f5c-ac50-4e1e-9e3c-a1181e162221','ae1489b958814b853096-blanket_1.jpg','Cama','854614ee-89a6-4edb-9f83-ccbae15ae589','2021-08-02 14:28:46.255','2021-08-02 14:28:46.255'),

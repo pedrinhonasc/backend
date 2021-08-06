@@ -19,7 +19,7 @@ export default class CreateImages1627946468764 implements MigrationInterface {
             isNullable: false,
           },
           {
-            name: 'subtitle',
+            name: 'caption',
             type: 'varchar',
             isNullable: true,
           },
