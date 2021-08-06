@@ -20,7 +20,7 @@ export default class CreateImageService {
     subtitle,
     product_id,
   }: IRequest): Promise<Image> {
-    const foundProduct = this.productsRepository.findById(product_id);
+    const foundProduct = await this.productsRepository.findById(product_id);
 
     if (!foundProduct) throw new AppError('Product not found.', 400);
 

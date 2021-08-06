@@ -1,5 +1,6 @@
 import IGetAllProductsDTO from '../dtos/IGetAllProducts';
 import IProductsRepository from '../repositories/IProductsRepository';
+import capitalizeFirstLetter from '../../../shared/utils/utils';
 
 interface IResponse {
   productsData: IProductsData[];
@@ -15,15 +16,6 @@ interface IProductsData {
   originalPrice: number;
   discountPrice: number;
   images: string[];
-}
-
-function capitalizeFirstLetter(text: string): string {
-  const words = text.split(' ');
-  return words
-    .map(word => {
-      return word[0].toUpperCase() + word.substring(1);
-    })
-    .join(' ');
 }
 
 export default class GetAllProductsService {
