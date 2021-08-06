@@ -1,8 +1,5 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-// yarn typeorm migretion:run
-// yarn typeorm migration:revert
-// yarn typeorm migration:show
 export default class CreateProducts1627753808774 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(

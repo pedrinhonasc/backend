@@ -15,8 +15,6 @@ export default class ImagesController {
       productsRepository,
     );
 
-    console.log(request.file?.filename);
-
     const image = await createImageService.execute({
       imagePath,
       caption,
